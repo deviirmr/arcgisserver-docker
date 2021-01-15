@@ -35,7 +35,7 @@ EXPOSE 1098 4000 4001 4002 4003 4004 6006 6080 6099 6443
 USER arcgis
 # Unpackage arcgisserver.tar.gz and install it.
 RUN mkdir /tmp/arcgisserver && tar xvzf /tmp/arcgisserver.tar.gz -C /tmp/arcgisserver && \
-    /tmp/arcgisserver/Setup -m silent -l yes -a /tmp/arcgisserver.prvc -d /
+    /tmp/arcgisserver/ArcGISServer/Setup -m silent -l yes -a /tmp/arcgisserver.prvc -d /
 
 # If your license doesn't work, the installer won't tell you.
 # Manually attempt to authorize and then check if it worked, fail if it doesn't.
